@@ -1,0 +1,60 @@
+/* Tabs Container */
+.tabs {
+  width: 100%;
+  background-color: #333; /* Dark background for tabs */
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* Tab List */
+.tab-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+/* Tab Item */
+.tab-item {
+  margin-right: 15px; /* Space between tabs */
+}
+
+/* Tab Link */
+.tab-link {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #fff; /* White text color for tab links */
+  padding: 10px 20px;
+  display: block;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover Effect on Tab Links */
+.tab-link:hover {
+  background-color: #ff6347; /* Hover background color */
+  color: #fff;
+}
+
+/* Active Tab Styling */
+.tab-link.active {
+  background-color: #ff6347; /* Active tab background color */
+  color: #fff;
+}
+
+/* Tab Content Sections */
+.tab-content {
+  padding: 20px;
+}
+
+/* Individual Tab Section */
+.tab-section {
+  display: none; /* Hide all sections by default */
+}
+
+/* Show active tab content */
+.tab-section.active {
+  display: block;
+}
+

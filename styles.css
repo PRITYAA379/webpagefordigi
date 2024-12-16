@@ -1,102 +1,106 @@
-/* Tabs Container */
-.tabs {
-  width: 100%;
-  background-color: #333; /* Dark background for the tab container */
-  display: flex;
-  justify-content: center;
-  padding: 10px;
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Tab List */
-.tab-list {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
+/* Body and header styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-/* Tab Item */
-.tab-item {
-  margin-right: 15px; /* Space between tabs */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Tab Link */
-.tab-link {
-  text-decoration: none;
-  font-size: 1.2rem;
-  color: #fff; /* White text color for tab links */
-  padding: 10px 20px;
-  display: block;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Added smooth transitions */
+header .logo img {
+    width: 150px;
 }
 
-/* Hover Effect on Tab Links */
-.tab-link:hover {
-  background-color: #ff6347; /* Hover background color */
-  color: #fff;
+nav ul {
+    list-style-type: none;
+    display: flex;
 }
 
-/* Active Tab Styling */
-.tab-link.active {
-  background-color: #ff4500; /* Active tab background color */
-  color: #fff;
+nav ul li {
+    margin: 0 15px;
 }
 
-/* Tab Content Sections */
-.tab-content {
-  padding: 20px;
-  max-width: 1200px; /* Optional: to limit content width */
-  margin: 0 auto;
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-/* Individual Tab Section */
-.tab-section {
-  display: none; /* Hide all sections by default */
-  opacity: 0; /* Start with hidden opacity */
-  transition: opacity 0.5s ease; /* Add transition for opacity */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
 
-/* Show active tab content */
-.tab-section.active {
-  display: block;
-  opacity: 1; /* Show the active tab content smoothly */
+/* Section styles */
+section {
+    padding: 40px;
+    margin: 20px 0;
 }
 
-/* Styling for tab section content */
-.tab-section h2 {
-  font-size: 2rem;
-  color: #333; /* Dark color for section titles */
-  margin-bottom: 10px;
+.intro h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
-.tab-section p {
-  font-size: 1.1rem;
-  color: #666; /* Lighter color for text */
+.cta-button {
+    background-color: #ff6347;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .tab-list {
-    flex-direction: column; /* Stack tabs vertically on smaller screens */
-    align-items: center; /* Center align tabs */
-  }
+.services-list h1 {
+    font-size: 2.5rem;
+}
 
-  .tab-item {
-    margin-right: 0;
-    margin-bottom: 10px; /* Add spacing between stacked tabs */
-  }
+.services-list ul {
+    list-style-type: none;
+}
 
-  .tab-link {
-    font-size: 1rem; /* Adjust font size for smaller screens */
-    padding: 8px 16px; /* Adjust padding for mobile view */
-  }
+.services-list li {
+    margin: 15px 0;
+}
 
-  .tab-section h2 {
-    font-size: 1.8rem; /* Adjust heading size for smaller screens */
-  }
+/* Contact form styles */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
 
-  .tab-section p {
-    font-size: 1rem; /* Adjust paragraph font size for smaller screens */
-  }
+.contact-form input, .contact-form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #ff6347;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
 }

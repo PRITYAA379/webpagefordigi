@@ -1,7 +1,7 @@
 /* Tabs Container */
 .tabs {
   width: 100%;
-  background-color: #333; /* Dark background for tabs */
+  background-color: #333; /* Dark background for the tab container */
   display: flex;
   justify-content: center;
   padding: 10px;
@@ -28,7 +28,7 @@
   padding: 10px 20px;
   display: block;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Added smooth transitions */
 }
 
 /* Hover Effect on Tab Links */
@@ -39,22 +39,64 @@
 
 /* Active Tab Styling */
 .tab-link.active {
-  background-color: #ff6347; /* Active tab background color */
+  background-color: #ff4500; /* Active tab background color */
   color: #fff;
 }
 
 /* Tab Content Sections */
 .tab-content {
   padding: 20px;
+  max-width: 1200px; /* Optional: to limit content width */
+  margin: 0 auto;
 }
 
 /* Individual Tab Section */
 .tab-section {
   display: none; /* Hide all sections by default */
+  opacity: 0; /* Start with hidden opacity */
+  transition: opacity 0.5s ease; /* Add transition for opacity */
 }
 
 /* Show active tab content */
 .tab-section.active {
   display: block;
+  opacity: 1; /* Show the active tab content smoothly */
 }
 
+/* Styling for tab section content */
+.tab-section h2 {
+  font-size: 2rem;
+  color: #333; /* Dark color for section titles */
+  margin-bottom: 10px;
+}
+
+.tab-section p {
+  font-size: 1.1rem;
+  color: #666; /* Lighter color for text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tab-list {
+    flex-direction: column; /* Stack tabs vertically on smaller screens */
+    align-items: center; /* Center align tabs */
+  }
+
+  .tab-item {
+    margin-right: 0;
+    margin-bottom: 10px; /* Add spacing between stacked tabs */
+  }
+
+  .tab-link {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+    padding: 8px 16px; /* Adjust padding for mobile view */
+  }
+
+  .tab-section h2 {
+    font-size: 1.8rem; /* Adjust heading size for smaller screens */
+  }
+
+  .tab-section p {
+    font-size: 1rem; /* Adjust paragraph font size for smaller screens */
+  }
+}
